@@ -1,4 +1,4 @@
-package Descanso;
+package lp2;
 
 import java.util.Arrays;
 

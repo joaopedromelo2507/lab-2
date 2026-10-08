@@ -1,4 +1,4 @@
-package Descanso;
+package lp2;
 
 
 public class Descanso {
