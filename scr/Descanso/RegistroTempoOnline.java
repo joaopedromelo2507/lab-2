@@ -22,7 +22,7 @@ public class RegistroTempoOnline {
     }
 
     public boolean atingiuMetaTempoOnline(){
-        if (tempoOnline / tempoEsperado > 1){
+        if (tempoOnline / tempoEsperado >= 1){
             return true;
         }
         return false;
@@ -30,6 +30,6 @@ public class RegistroTempoOnline {
 
     @Override
     public String toString() {
-        return super.toString();
+        return nomeDisciplina + " " + tempoOnline + "/" + tempoEsperado;
     }
 }

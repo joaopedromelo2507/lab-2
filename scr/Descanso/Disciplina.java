@@ -1,9 +1,11 @@
 package Descanso;
 
+import java.util.Arrays;
+
 public class Disciplina {
     private String nomeDisciplina;
     private int horasEstudo = 0;
-    private double[] notas = {0, 0, 0, 0};
+    private double[] notas = new double[4];
 
     public Disciplina(String nomeDisciplina){
         this.nomeDisciplina = nomeDisciplina;
@@ -19,16 +21,23 @@ public class Disciplina {
         for (int i = 0; i < 4; i++){
             soma += notas[i];
         }
-        if (soma / 4 > 7){
+        if (soma / 4 >= 7){
             return true;
         }
         else{
             return false;
         }
     }
+    private double calculaMedia(){
+        int soma = 0;
+        for (int i = 0; i < notas.length; i++){
+            soma += notas[i];
+        }
+        return soma/4;
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return nomeDisciplina + " " + horasEstudo + " " + calculaMedia() + " " + Arrays.toString(this.notas);
     }
 }
