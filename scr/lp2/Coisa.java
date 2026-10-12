@@ -1,5 +1,7 @@
 package lp2;
 
+import java.util.Arrays;
+
 public class Coisa {
     public static void main(String[] args) {
         registrarDescanso();
@@ -46,6 +48,20 @@ public class Coisa {
         prog2.cadastraNota(4, 10.0);
         System.out.println(prog2.aprovado());
         System.out.println(prog2.toString());
+        Disciplina teste = new Disciplina("teste", 3, new int[]{2, 1, 5});
+        teste.cadastraNota(1, 8.0);
+        teste.cadastraNota(2, 0.0);
+        teste.cadastraNota(3, 8.0);
+        System.out.println(teste.aprovado());
+        System.out.println(teste.toString());
+        Disciplina testando = new Disciplina(5);
+        testando.cadastraNota(1, 7.0);
+        testando.cadastraNota(2, 7.0);
+        testando.cadastraNota(3, 7.0);
+        testando.cadastraNota(4, 7.0);
+        testando.cadastraNota(5, 7.0);
+        System.out.println(testando.aprovado());
+        System.out.println(testando.toString());
     }
     private static void registrarResumos() {
         RegistroResumos meusResumos = new RegistroResumos(100);  // 100 resumos
@@ -67,6 +83,7 @@ public class Coisa {
         System.out.println(meusResumos.imprimeResumos());
         System.out.println(meusResumos.temResumo("Classes"));
         System.out.println(meusResumos.temResumo("Objetos"));
+        System.out.println(Arrays.toString(meusResumos.busca("Um")));
     }
 }
 
